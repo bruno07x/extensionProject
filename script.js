@@ -70,7 +70,7 @@ $(document).ready(function(){
     //NOTE: Get the right time
     function setCurrentTime(){
         var now = new Date();
-        var minutes = now.getMinutes() < 10 ? '0' : '' + now.getMinutes();
+        var minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : '' + now.getMinutes();
         console.log(minutes);
         $(".extension-time").html(now.getHours()+":" + minutes);
         $(".extension-top-right-date").html(now.toLocaleDateString('pt-br', {weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'}));
